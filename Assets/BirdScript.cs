@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class BirdScript : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class BirdScript : MonoBehaviour
         {
             myRigidbody.linearVelocity = Vector2.up * flapStrength;
         }
+
+        print($"Bird position: {myRigidbody.position}");
+         
 
     }
 }

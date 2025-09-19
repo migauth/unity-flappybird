@@ -7,7 +7,6 @@ public class SpikeSpawnScript : MonoBehaviour
     public float spawnRate = 2;
     private float timer = 0;
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,9 +22,14 @@ public class SpikeSpawnScript : MonoBehaviour
         }
         else
         {
-            Instantiate(spike, transform.position, transform.rotation);
-            timer = 0;
+            spawnSpikes();
         }
 
+    }
+
+    void spawnSpikes()
+    {
+        Instantiate(spike, new Vector3(14, Random.Range(-8f, 8f), 0), transform.rotation);
+        timer = 0;
     }
 }

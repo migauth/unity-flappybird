@@ -19,10 +19,7 @@ public class BirdScript : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             myRigidbody.linearVelocity = Vector2.up * flapStrength;
-        }
-
-        print($"Bird position: {myRigidbody.position}");
-         
+        }         
 
     }
 }

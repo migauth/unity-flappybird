@@ -10,7 +10,7 @@ public class SpikeSpawnScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        Debug.Log("Screen Height : " + Screen.height);
     }
 
     // Update is called once per frame
@@ -23,6 +23,8 @@ public class SpikeSpawnScript : MonoBehaviour
         else
         {
             spawnSpikes();
+            timer = 0;
+
         }
 
     }
@@ -30,6 +32,5 @@ public class SpikeSpawnScript : MonoBehaviour
     void spawnSpikes()
     {
         Instantiate(spike, new Vector3(14, Random.Range(-8f, 8f), 0), transform.rotation);
-        timer = 0;
     }
 }
